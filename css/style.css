@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=League+Spartan:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+body {
+    width: 100%;
+
+}
+
+/* Header Section Begin*/
+
+#header,
+.sign-in-bar,
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#header {
+    padding: 10px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+.header__logo .logo {
+    width: 200px;
+
+}
+
+
+.navbar ul li,
+.sign-in-bar li {
+    list-style-type: none;
+    padding: 0 20px;
+    text-transform: capitalize;
+    position: relative;
+
+
+}
+
+.navbar ul li a,
+.sign-in-bar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: .3s .3s ease;
+
+}
+
+.navbar ul li a:hover,
+.navbar ul li .active {
+    color: #ff6600;
+}
+
+.navbar ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #217994;
+    position: absolute;
+    bottom: -3px;
+    left: 20px;
+    transition: .3s .3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li .active::after {
+    width: 50%;
+}
+
+
+.sign-in-bar li {
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: .1s .1s ease-in-out;
+}
+
+.sign-in-bar li a {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #217994;
+    padding: 10px 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sign-in-bar li a:hover {
+    background-color: #ff6600;
+}
+
+/* Header Section End */
+
+
+
+#hero {
+    background-image: url("../assets/1899412.jpg");
+    background-size: cover;
+    /* background-position: top 25% right 0; */
+    background-color: #E3E6F3;
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+#hero h5 {
+    padding-bottom: 15px;
+}
+
+#hero h1 {
+    color: #ff6600;
+}
+
+
+
+
