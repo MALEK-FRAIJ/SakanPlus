@@ -73,18 +73,19 @@ p {
 body {
     width: 100%;
     height: 9999px;
-    /* background-color: #fdd7bd33; */
+    background-color: #fdd7bd33;
 }
 
 /* Header Section Begin*/
 
 #header,
 .header-btn,
-.navbar .navbar-list {
+.navbar .navbar-list,
+.navbar-search,#features {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    flex-wrap: wrap; 
 
 }
 
@@ -147,7 +148,7 @@ body {
     width: 50%;
 }
 
-.header-btn .sign-btn {
+.header-btn .sign-btn  {
     border: 2px solid transparent;
     border-radius: 5px;
     background-color: #217994;
@@ -228,7 +229,7 @@ body {
 #hero {
     background-image: url("../assets/hero-background-real-estate/hero1.png");
     background-size: cover;
-    background-position: top 25% right 0;
+    background-position: top 60% right 0;
     background-color: #E3E6F3;
     height: 90vh;
     width: 100%;
@@ -245,12 +246,12 @@ body {
     text-transform: capitalize;
 }
 
-#hero h5 {
+#hero h5,.rih-side h5 {
     padding-bottom: 15px;
     font-size: 16px;
 }
 
-#hero h2 {
+#hero h2,.rih-side h2 {
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     color: #154b5c;
@@ -264,34 +265,117 @@ body {
 
 }
 
-.hero-search-bar {
-    background-color: #fdd7bd33;
-    width: 300px;
-    height: 300px;
+/*   hero Section End */
 
+/* hero-search Begin */
+#hero-search {
+    background-color: #d5dee0;
+    width: 60%;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: min-content;
+    border-radius: 15px;
+    margin-top: -3vw;
+  
+}
+
+#hero-search .navbar-search {
+    padding: 15px;
 
 }
 
-input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+#hero-search .navbar-search li {
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+#hero-search .navbar-search li a ,.rih-side a{
+    text-decoration: none;
+    max-width: 100px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #217994;
+    padding: 10px 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #f3f4f5;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    font-weight: 600;
+
+}
+
+#hero-search .hero-in {
+    padding: 0 15px 15px;
+    
+}
+#hero-search .navbar-search li a:hover,.rih-side a:hover {
+
+    border: 2px solid #217994;
+    background-color: transparent;
+    color: #ff6600;
+}
+
+
+#hero-search input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #217994;
+    border-radius: 4px;
+    
     background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px;
+    background-image: url("../assets/all-icon-sakan-plus/clipart2572350zx.png");
+    background-position: 9px 9px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 10px 20px 10px 50px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-}
+    color: #ff6600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 
-.hero-search-bar .hero-in:focus {
+}
+#hero-search input[type=text]::placeholder{
+    color: #ff6600;
+}
+#hero-search input[type=text]:focus {
     width: 100%;
-}
 
-/*   hero Section End */
+
+}
+/*   hero Search End */
+
+/* feachers */
+
+#features{
+    margin: 30px 0;
+    padding: 10px 80px;
+    background-color: #eee;
+    height: 50vw;
+}
+#features .lft-side {
+    width: 45%;
+    height: 30vw;
+    background-image: url('../assets/sakan-plus-main-home/home-main.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #222;
+   
+
+    max-height: calc(100vh - 150px);
+    margin-bottom: 40px;
+    display: block;
+    cursor: pointer;
+
+}
+#features .rih-side{
+    width: 45%;
+    background-color: #465b52;
+}
+/*  */
 /* RESPONSIVE DESIGN Begin */
 
 @media(max-width:1530px) {
