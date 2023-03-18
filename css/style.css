@@ -268,7 +268,7 @@ html {
 #hero h5,
 .rft-side h5,
 .features-box h6,
-.property-text h5 {
+.property-text h5,#services h5 {
     padding-bottom: 15px;
     padding-top: 10px;
     font-size: 17px;
@@ -276,7 +276,7 @@ html {
 
 #hero h2,
 .rft-side h2,
-.property-text h2 {
+.property-text h2,#services h2 {
     color: var(--heroH2Color);
     padding-bottom: 5px;
     font-weight: 600;
@@ -287,7 +287,7 @@ html {
 #hero h1,
 #hero-search h1,
 .rft-side h4,
-.property-text h4 {
+.property-text h4,#services h4 {
     color: var(--orangeColor);
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -516,7 +516,7 @@ html {
 }
 
 .property-btn a:active,
-.property-btn a:hover {
+.property-btn a:hover{
     background-color: var(--backgroundMainColor);
     color: var(--whiteColor);
     outline: none;
@@ -651,6 +651,50 @@ figure {
 /* Cart Home End */
 /* property Section End */
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+/*  */
+#services{
+    background-color: var(--whiteColor);
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+    margin: 50px 0;
+    text-transform: capitalize;
+    
+}
+.sv-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.sv-buy{
+    width: 30%;
+    height: 60vh;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(245, 222, 179, 0.438);
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.sv-buy img{
+    width: 100px;
+ 
+}
+.sv-buy p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6rem;
+    text-align: left;
+    
+}
+.sv-buy:hover{
+    color: var(--whiteColor);
+    background-color: var(--backgroundMainColor);
+}
+
+/*  */
 /* footer section Begin */
 .section-p1 {
     background-color: var(--backgroundMainColor);
