@@ -44,11 +44,12 @@
 */
 
 /* BASE - Base styles, Variables, Mixins, etc. */
-* {
-    margin: 0;
-    padding: 0;
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    font-family: 'League Spartan', sans-serif;
+
 }
 
 h1 {
@@ -83,9 +84,12 @@ body {
     width: 100%;
     /* background-color: #644d4d15; */
     /*  height:9999px; */
-
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -268,7 +272,10 @@ html {
 #hero h5,
 .rft-side h5,
 .features-box h6,
-.property-text h5,#services h5 {
+.property-text h5,
+#services h5,
+.works-txt h5,
+#cta h5 {
     padding-bottom: 15px;
     padding-top: 10px;
     font-size: 17px;
@@ -276,7 +283,10 @@ html {
 
 #hero h2,
 .rft-side h2,
-.property-text h2,#services h2 {
+.property-text h2,
+#services h2,
+.works-txt h2,
+#cta h2 {
     color: var(--heroH2Color);
     padding-bottom: 5px;
     font-weight: 600;
@@ -287,7 +297,10 @@ html {
 #hero h1,
 #hero-search h1,
 .rft-side h4,
-.property-text h4,#services h4 {
+.property-text h4,
+#services h4,
+.works-txt h4,
+#cta h4 {
     color: var(--orangeColor);
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -437,7 +450,7 @@ html {
 .bx-4 {
     background-color: rgba(245, 222, 179, 0.623);
     width: 45%;
-    padding: 20px;
+    padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
 
@@ -457,6 +470,7 @@ html {
     text-transform: capitalize;
     font-weight: 600;
     color: var(--heroH2Color);
+    margin: 15px;
 }
 
 .rft-side a {
@@ -472,14 +486,16 @@ html {
 /* features Section End */
 
 /* property section Begin */
-#property {
+#property,
+#cta {
     background-color: rgba(245, 222, 179, 0.438);
     padding: 40px;
     margin: 50px 0;
     border-radius: 20px;
 }
 
-.pro-container {
+.pro-container,
+.works-container {
     padding: 0 20px;
     margin: 0 20px;
 }
@@ -499,7 +515,8 @@ html {
     margin: 20px 0;
 }
 
-.property-btn a {
+.property-btn a,
+.cta-btn a {
     width: 15%;
     text-decoration: none;
     font-size: 17px;
@@ -516,7 +533,8 @@ html {
 }
 
 .property-btn a:active,
-.property-btn a:hover{
+.property-btn a:hover,
+.cta-btn a:hover {
     background-color: var(--backgroundMainColor);
     color: var(--whiteColor);
     outline: none;
@@ -538,8 +556,8 @@ html {
 .articles {
     display: grid;
     max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 24px;
+    /*  margin-inline: auto; 
+    padding-inline: 24px;  */
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     cursor: pointer;
     gap: 24px;
@@ -653,22 +671,23 @@ figure {
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
 /*  */
-#services{
+#services {
     background-color: var(--whiteColor);
     text-align: center;
     width: 100%;
     padding: 40px;
     margin: 50px 0;
     text-transform: capitalize;
-    
+
 }
-.sv-card{
+
+.sv-card {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
 }
-.sv-buy{
+
+.sv-buy {
     width: 30%;
     height: 60vh;
     padding: 20px;
@@ -676,22 +695,275 @@ figure {
     background-color: rgba(245, 222, 179, 0.438);
     border-radius: 20px;
     cursor: pointer;
-    
+
 }
-.sv-buy img{
+
+.sv-buy img {
     width: 100px;
- 
+
 }
-.sv-buy p{
+
+.sv-buy p {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.6rem;
-    text-align: left;
-    
+   /*  text-align: left; */
+
 }
-.sv-buy:hover{
+
+.sv-buy:hover {
     color: var(--whiteColor);
+    background-color: wheat;
+ 
+}
+
+/*works Section Begin  */
+
+#works {
+    /*  background-image: linear-gradient(45deg, #7c9885, #b5b682); */
+    /*  background-color: var(--whiteColor); */
+    background-image: linear-gradient(45deg, #7c98852f, #b5b68223);
+    width: 100%;
+    padding: 40px;
+    margin: 50px 0;
+    text-transform: capitalize;
+    border-radius: 20px;
+}
+
+.works-txt {
+    max-width: 65%;
+}
+
+/*  */
+
+#multi-step-form-container {
+    margin-top: 5rem;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.button {
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--backgroundMainColor);
     background-color: var(--backgroundMainColor);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    border: 1px solid var(--orangeColor);
+    background-color: var(--orangeColor);
+    ;
+}
+
+.mt-3 {
+    margin-top: 2rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.form-step {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+ul.form-stepper {
+    counter-reset: section;
+    margin-bottom: 3rem;
+}
+
+ul.form-stepper .form-stepper-circle {
+    position: relative;
+}
+
+ul.form-stepper .form-stepper-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.form-stepper-horizontal {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+ul.form-stepper>li:not(:last-of-type) {
+    margin-bottom: 0.625rem;
+    -webkit-transition: margin-bottom 0.4s;
+    -o-transition: margin-bottom 0.4s;
+    transition: margin-bottom 0.4s;
+}
+
+.form-stepper-horizontal>li:not(:last-of-type) {
+    margin-bottom: 0 !important;
+}
+
+.form-stepper-horizontal li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.form-stepper-horizontal li:not(:last-child):after {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1px;
+    content: "";
+    top: 32%;
+}
+
+.form-stepper-horizontal li:after {
+    background-color: #dee2e6;
+
+}
+
+.form-stepper-horizontal li.form-stepper-completed:after {
+    background-color: var(--orangeColor);
+}
+
+.form-stepper-horizontal li:last-child {
+    flex: unset;
+}
+
+ul.form-stepper li a .form-stepper-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    line-height: 1.7rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 50%;
+}
+
+.form-stepper .form-stepper-active .form-stepper-circle {
+    background-color: var(--orangeColor) !important;
+    color: #fff;
+}
+
+.form-stepper .form-stepper-active .label {
+    color: var(--darkFont) !important;
+}
+
+.form-stepper .form-stepper-active .form-stepper-circle:hover {
+    background-color: var(--backgroundMainColor) !important;
+    color: #fff !important;
+}
+
+.form-stepper .form-stepper-unfinished .form-stepper-circle {
+    background-color: #f8f7ff;
+}
+
+.form-stepper .form-stepper-completed .form-stepper-circle {
+    background-color: #0e9594 !important;
+    color: #fff;
+}
+
+.form-stepper .form-stepper-completed .label {
+    color: #0e9594 !important;
+}
+
+.form-stepper .form-stepper-completed .form-stepper-circle:hover {
+    background-color: #0e9594 !important;
+    color: #fff !important;
+}
+
+.form-stepper .form-stepper-active span.text-muted {
+    color: #fff !important;
+}
+
+.form-stepper .form-stepper-completed span.text-muted {
+    color: #fff !important;
+}
+
+.form-stepper .label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.form-stepper a {
+    cursor: default;
+}
+
+/*  */
+/*Works Section End  */
+/*  */
+#cta {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#cta h4 {
+    text-transform: uppercase;
+}
+
+#cta input[type=email] {
+    width: 30vw;
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+    font-size: 17px;
+    outline: none;
+}
+
+#cta button {
+    width: 20vh;
+    padding: 14px;
+    border: 2px solid var(--background-transparent);
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--fontColor);
+    background-color: var(--orangeColor);
+    font-size: 17px;
+    font-weight: 600;
+    transition: .2s .2s ease;
+}
+
+#cta button:hover {
+    background-color: var(--background-transparent);
+    border: 2px solid var(--orangeColor);
+    color: var(--heroH2Color);
 }
 
 /*  */
