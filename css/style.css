@@ -707,14 +707,14 @@ figure {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.6rem;
-   /*  text-align: left; */
+    /*  text-align: left; */
 
 }
 
 .sv-buy:hover {
     color: var(--whiteColor);
     background-color: wheat;
- 
+
 }
 
 /*works Section Begin  */
@@ -1093,6 +1093,7 @@ ul.form-stepper li a .form-stepper-circle {
 
 /* footer section End */
 
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
 
 
@@ -1143,6 +1144,7 @@ ul.form-stepper li a .form-stepper-circle {
     text-decoration: none;
     color: var(--orangeColor);
 }
+/*scroll to top End*/
 
 @container card (min-width: 380px) {
     .article-wrapper {
@@ -1168,8 +1170,6 @@ ul.form-stepper li a .form-stepper-circle {
     }
 }
 
-
-/*scroll to top End*/
 /* RESPONSIVE DESIGN Begin */
 
 @media (max-width: 1199px) {
