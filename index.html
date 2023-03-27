@@ -67,9 +67,14 @@
 
 </head>
 
-<body>
+<body onload="loader()">
 
-
+    <!-- wpf loader Two -->
+    <div id="wpf-loader-two">
+        <span class="loader-title">Sakan<span>Plus</span>®</span>
+        <div id="loader"></div>
+    </div>
+    <!-- / wpf loader Two -->
 
     <!-- SCROLL TOP BUTTON -->
     <a id="scroll-top-btn" class="scrollToTop" href="#">
@@ -82,38 +87,87 @@
 
     <!-- Header Section Begin -->
     <section id="header">
+
+        <!-- header logo Begin -->
         <div class="header__logo">
             <a href="index.html"><img src="./assets/logo-darkmode/sakan-logo-dark-cahnge.png" class="logo" alt=""></a>
         </div>
+        <!-- header logo End -->
+
+
+        <!-- menu icon using mobile screen Begin -->
         <div class="bx bx-menu" id="menu-icon"></div>
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li><a class="active" href="#">home</a></li>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">features</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">how it work</a></li>
-                <li><a href="#">property</a></li>
+        <!-- menu icon using mobile screen End -->
 
+
+        <!-- navbar Section Begin -->
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">buy</a></li>
+                <li><a href="#">sell</a></li>
+                <li><a href="#">rent</a></li>
+                <li>
+                    <a href="#">services
+                        <span class="arrow">&#x25BC;</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">residentials</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">office space</a></li>
+                        <li>
+                            <a href="#">commercials
+                                <span class="arrow">&#x25B6;</span>
+                            </a>
+                            <ul class="submenu-2">
+                                <li><a href="#">residentials</a></li>
+                                <li><a href="#">Apartments</a></li>
+                                <li><a href="#">office space</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">explore more </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQs</a></li>
+                <li>
+                    <a href="#">property
+                        <span class="arrow">&#x25BC;</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">residentials</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">office space</a></li>
+                        <li>
+                            <a href="#">commercials
+                                <span class="arrow">&#x25B6;</span>
+                            </a>
+                            <ul class="submenu-2">
+                                <li><a href="#">residentials</a></li>
+                                <li><a href="#">Apartments</a></li>
+                                <li><a href="#">office space</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-
         </nav>
-        <div class="header-btn ">
-            <a href="signUp.html" class="sign-btn">sign in</a>
-            <li class="dropdown-icon">
-                <a href="javascript:void(0);" onclick="myFunction()" class="drop-btn">
+        <!-- navbar Section End -->
+        <div class="nav-btn">
+            <a href="signIn.html" class="sign-btn">sign in</a>
+            <li>
+                <a href="javascript:void(0);" onclick="language()" class="drop-btn">
                     <i class="fa fa-gear"></i>
+                    <span class="arrow">&#x25BC;</span>
                 </a>
-                <div class="dropdown-content">
-                    <a class="content-1" href="#">En</a>
-                    <a class="content-2" href="#">Ar</a>
-                </div>
-
+                <ul class="list-language">
+                    <li><a href="#">En</a></li>
+                    <li><a href="#">Ar</a></li>
+                </ul>
             </li>
         </div>
-
     </section>
     <!-- Header Section End -->
+
+
 
     <!-- hero Section Begin -->
     <section id="hero">
@@ -121,26 +175,28 @@
             <h2>find your next dream home with our</h2>
             <h1>exceptional properties</h1>
             <h5>Amet minim mollit non deserunt ullamco est sit aliqua dolor do a sint</h5>
-            <a href="#" class="hero-sign-btn">read more</a>
-        </div>
-
-    </section>
-
-    <section id="hero-search">
-        <h1>Find, share and explore your home</h1>
-        <div class="input-box">
-            <i class="uil uil-search"></i>
-            <input type="text" placeholder="Search here..." />
-            <button class="button">Search</button>
+            <a href="#">read more</a>
         </div>
 
     </section>
     <!-- hero Section Begin -->
 
+    <!-- Search Section Begin -->
+    <section id="hero-search">
+        <h1>Find, share and explore your home</h1>
+        <div class="input-box">
+            <i class="uil uil-search"></i>
+            <input type="text" placeholder="Enter an address, neighborhood, city, or ZIP code" />
+            <button class="button">Search</button>
+        </div>
 
+    </section>
+    <!-- Search Section End -->
+
+    <!-- features Section Begin -->
     <section id="features">
         <div class="lft-side">
-            <a href="#"><img src="./assets/sakan-plus-main-home/home-carton-ez-des-213.png" class="lft-img" alt=""></a>
+            <a href="#"><img src="./assets/sakan-plus-main-home/Where-are-you.png" class="lft-img" alt=""></a>
         </div>
         <div class="rft-side">
             <h4>Features</h4>
@@ -165,9 +221,10 @@
                     <h6>life-time garantee</h6>
                 </div>
             </div>
-            <a href="#" class="features-btn">read more</a>
+            <a href="#" class="features-btn">other features</a>
         </div>
     </section>
+    <!-- features Section End -->
 
     <section id="property">
         <div class="pro-container">
@@ -183,94 +240,15 @@
                 <a href="#">office space</a>
                 <a href="#">commercials</a>
                 <a href="#" class="ex-flex-end">explore more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
 
 
-            </div>
-            <div class="articles">
-                <div class="article-card">
-                    <div class="article-wrapper">
-                        <figure>
-                            <img src="assets/cart-home-sakan-plus/cart-home-2.jpg" alt="" />
-                        </figure>
-                        <div class="article-body">
-                            <h2>$295,000</h2>
-                            <h4>4 bd | 3 ba | 2,210sqft</h4>
-                            <h4>For sale | location: Amman</h4>
-                            <p>Come see this 4 bedroom 2 and half bathroom home.
-                                New paint, new flooring. Make this house your home.</p>
-                            <a href="#" class="read-more">
-                                Read more <span class="sr-only">about this is some title</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                        ; clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="articles">
                 <div class="article-card">
                     <div class="article-wrapper">
                         <figure>
-                            <img src="assets/cart-home-sakan-plus//cart-home-1.jpg" alt="" />
-                        </figure>
-                        <div class="article-body">
-                            <h2>$340,800</h2>
-                            <h4>3 bd | 3 ba | 2,480 sqft</h4>
-                            <h4>For sale | location: zarqa</h4>
-                            <p>Come see this 3 bedroom 3 and half bathroom home.
-                                New paint, new flooring. Make this house your home.</p>
-                            <a href="#" class="read-more">
-                                Read more <span class="sr-only">about this is some title</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                        ; clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="articles">
-                <div class="article-card">
-                    <div class="article-wrapper">
-                        <figure>
-                            <img src="assets/cart-home-sakan-plus/cart-home-4.jpg" alt="" />
-                        </figure>
-                        <div class="article-body">
-                            <h2>$515,000</h2>
-                            <h4>6 bd | 4 ba | 2,582 sqft</h4>
-                            <h4>For sale | location: irbid</h4>
-                            <p>Welcome home to this beautiful brick ranch with 4 bedrooms,
-                                3 baths on a finished basement that includes 2 additional
-                                bedrooms and 1 full bathroom! Mckibben Place is an adorable
-                                one street private subdivision with no HOA. </p>
-                            <a href="#" class="read-more">
-                                Read more <span class="sr-only">about this is some title</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                        ; clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="articles">
-                <div class="article-card">
-                    <div class="article-wrapper">
-                        <figure>
-                            <img src="assets/cart-home-sakan-plus/cart-home-5.jpg" alt="" />
+                            <img src="assets/cart-home-sakan-plus/Most-Beautiful-House-in-the-World.jpg" alt="" />
                         </figure>
                         <div class="article-body">
                             <h2>$269,900</h2>
@@ -295,18 +273,22 @@
                 </div>
             </div>
 
+
             <div class="articles">
                 <div class="article-card">
                     <div class="article-wrapper">
                         <figure>
-                            <img src="assets/cart-home-sakan-plus/cart-home-6.jpeg"" />
+                            <img src="assets/cart-home-sakan-plus/Most-Beautiful-House-in-the-World.jpg" alt="" />
                         </figure>
-                        <div class=" article-body">
-                            <h2>$504,190</h2>
-                            <h4>5 bd | 4 ba | 3,341 sqft</h4>
-                            <h4>For sale | location: Zarqa</h4>
-                            <p> Beautiful home design on a corner lot with a side-entry garage complete with hardwoods,
-                                granite counter tops, coffered ceilings, bronze hardware.</p>
+                        <div class="article-body">
+                            <h2>$269,900</h2>
+                            <h4>4 bd | 3 ba | 2,142 sqft</h4>
+                            <h4>For sale | location: Al-Mafraq</h4>
+                            <p>Be prepared to fall in love with this beauty! This 4 bedroom,
+                                2.5 bathroom home is located in the charming and quiet neighborhood
+                                of Carriage Gate. New flooring has just been installed throughout!
+                                The roof was replaced in 2016. You will never miss a beat with
+                                the open kitchen.</p>
                             <a href="#" class="read-more">
                                 Read more <span class="sr-only">about this is some title</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
@@ -316,45 +298,10 @@
                                         ; clip-rule="evenodd" />
                                 </svg>
                             </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-        <div class="articles">
-            <div class="article-card">
-                <div class="article-wrapper">
-                    <figure>
-                        <img src="assets/cart-home-sakan-plus/Most-Beautiful-House-in-the-World.jpg" alt="" />
-                    </figure>
-                    <div class="article-body">
-                        <h2>$269,900</h2>
-                        <h4>4 bd | 3 ba | 2,142 sqft</h4>
-                        <h4>For sale | location: Al-Mafraq</h4>
-                        <p>Be prepared to fall in love with this beauty! This 4 bedroom,
-                            2.5 bathroom home is located in the charming and quiet neighborhood
-                            of Carriage Gate. New flooring has just been installed throughout!
-                            The roof was replaced in 2016. You will never miss a beat with
-                            the open kitchen.</p>
-                        <a href="#" class="read-more">
-                            Read more <span class="sr-only">about this is some title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    ; clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
 
         </div>
     </section>
@@ -367,26 +314,27 @@
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do a sint</h5>
         <div class="sv-card">
             <div class="sv-buy">
-                <img src="assets/icon-transaction-sakan-plus/dollar-sign.png" alt="">
+                <img src="assets/icon-transaction-sakan-plus/dollar-sign-orange.png" alt="">
                 <h4>Buy a home</h4>
                 <p>Find your place with an immersive photo experience and the most listings,
                     including things you will not find anywhere else.</p>
-                <!-- <a href="#">Buy</a> -->
+                <a href="#">Buy</a>
             </div>
             <div class="sv-buy">
-                <img src="assets/icon-transaction-sakan-plus/loan.png" alt="">
+                <img src="assets/icon-transaction-sakan-plus/loan-orange.png" alt="">
                 <h4>Sell a home</h4>
                 <p>No matter what path you take to sell your home, we can help you navigate a
                     successful sale.</p>
-                <!-- <a href="#">Sell</a> -->
+                <a href="#">Sell</a>
             </div>
             <div class="sv-buy">
-                <img src="assets/icon-transaction-sakan-plus/deal.png" alt="">
+                <img src="assets/icon-transaction-sakan-plus/deal-orange.png" alt="">
+
                 <h4>Rent a home</h4>
                 <p>We’re creating a seamless online experience-from shopping on
                     the largest rental network, to applying, to paying rent.</p>
 
-                <!-- <a href="#">Rent</a> -->
+                <a href="#">Rent</a>
             </div>
         </div>
     </section>

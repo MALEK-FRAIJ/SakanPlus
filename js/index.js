@@ -1,5 +1,8 @@
-function myFunction() {
-  const x = document.querySelector(".dropdown-content");
+var loadVar;
+
+
+function language() {
+  const x = document.querySelector(".list-language");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -134,3 +137,17 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
   container.classList.remove("right-panel-active");
 });
+
+
+/* section loader pages Begin */
+
+
+function loader() {
+  loadVar = setTimeout(showPage, 700);
+}
+
+function showPage() {
+  document.getElementById("wpf-loader-two").style.display = "none";
+
+}
+/* section loader pages ENd */
