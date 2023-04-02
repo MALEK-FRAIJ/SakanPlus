@@ -125,21 +125,7 @@ document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn)
 });
 
 
-/*  */
-/* const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-  container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-  container.classList.remove("right-panel-active");
-});
- */
-
-/* section loader pages Begin */
+/* sction loader pages Begin */
 
 
 function loader() {
@@ -151,3 +137,20 @@ function showPage() {
 
 }
 /* section loader pages ENd */
+
+
+/*  */
+
+const registerButton = document.getElementById("register");
+const loginButton = document.getElementById("login");
+const container = document.getElementById("container");
+
+registerButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
+
+loginButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
+
+/*  */
